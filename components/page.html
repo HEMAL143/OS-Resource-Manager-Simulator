@@ -1,0 +1,28 @@
+<h2>Page Replacement</h2>
+
+<div class="card">
+    <label>Reference String:</label><br>
+    <input type="text" id="pages" placeholder="e.g. 1 2 3 4 1 2 5">
+</div>
+
+<div class="card">
+    <label>Number of Frames:</label><br>
+    <input type="number" id="frames" min="1" max="10">
+</div>
+
+<div class="card">
+    <label>Select Algorithm:</label><br>
+    <select id="pageAlgo">
+        <option value="">-- Select --</option>
+        <option value="FIFO">FIFO</option>
+        <option value="LRU">LRU</option>
+        <option value="Optimal">Optimal</option>
+    </select>
+</div>
+
+<div class="card">
+    <button onclick="runPage()">Run</button>
+</div>
+
+<p id="pageError" class="error"></p>
+<div id="pageOutput"></div>

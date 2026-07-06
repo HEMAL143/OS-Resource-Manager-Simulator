@@ -1,0 +1,37 @@
+<h2>CPU Scheduling</h2>
+
+<!-- ALGORITHM FIRST -->
+<div class="card">
+    <label>Select Algorithm:</label>
+    <select id="algo" onchange="handleAlgoChange()">
+        <option value="">-- Select --</option>
+        <option value="FCFS">FCFS</option>
+        <option value="SJF">SJF</option>
+        <option value="SRTF">SRTF</option>
+        <option value="PriorityNP">Priority (Non-Preemptive)</option>
+        <option value="PriorityP">Priority (Preemptive)</option>
+        <option value="RR">Round Robin</option>
+    </select>
+</div>
+
+<!-- NUMBER -->
+<div class="card">
+    <label>Number of Processes:</label>
+    <input type="number" id="numProcesses" min="1" max="20">
+    <button onclick="generateInputs()">Generate</button>
+</div>
+
+<!-- QUANTUM -->
+<div id="quantumDiv" class="card" style="display:none;">
+    <label>Time Quantum:</label>
+    <input type="number" id="quantum" min="1">
+</div>
+
+<!-- TABLE -->
+<div id="processInputs"></div>
+
+<!-- RUN -->
+<button onclick="runScheduling()">Run</button>
+
+<p id="error" class="error"></p>
+<div id="output"></div>
